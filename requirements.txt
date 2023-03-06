@@ -4,8 +4,8 @@ torch
 torchvision
 torchsummary
 tensorboardX
-logging
+#logging
 tqdm
-json
+#json
 einops
 pandas
