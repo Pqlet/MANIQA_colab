@@ -17,7 +17,7 @@ from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '5'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 
 def setup_seed(seed):
@@ -119,7 +119,7 @@ def eval_epoch(config, epoch, net, criterion, test_loader):
 
 
 if __name__ == '__main__':
-    cpu_num = 1
+    cpu_num = 4
     os.environ['OMP_NUM_THREADS'] = str(cpu_num)
     os.environ['OPENBLAS_NUM_THREADS'] = str(cpu_num)
     os.environ['MKL_NUM_THREADS'] = str(cpu_num)
@@ -133,10 +133,10 @@ if __name__ == '__main__':
     config = Config({
         # dataset path
         "db_name": "PIPAL",
-        "train_dis_path": "/mnt/data_16TB/wth22/IQA_dataset/PIPAL/Train_Distort/",
-        "val_dis_path": "/mnt/data_16TB/wth22/IQA_dataset/PIPAL/Val_Distort/",
-        "train_txt_file_name": "./data/pipal21_train.txt",
-        "val_txt_file_name": "./data/pipal21_val.txt",
+        "train_dis_path": "../NITRE2022/PIPAL_Training_Data/dist_images/",
+        "val_dis_path": "../NITRE2022/NTIRE2022_NR_Valid_Dis/",
+        "train_txt_file_name": "./MANIQA/data/pipal21_train.txt",
+        "val_txt_file_name": "./MANIQA/data/pipal21_val.txt",
 
         # optimization
         "batch_size": 8,
