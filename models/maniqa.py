@@ -54,7 +54,7 @@ class MANIQA(nn.Module):
         self.input_size = img_size // patch_size
         self.patches_resolution = (img_size // patch_size, img_size // patch_size)
         
-        self.vit = timm.create_model('vit_base_patch8_224', pretrained=True)
+        self.vit = timm.create_model('vit_base_patch8_224', pretrained=True).requires_grad_(False)
         self.save_output = SaveOutput()
         hook_handles = []
         for layer in self.vit.modules():
