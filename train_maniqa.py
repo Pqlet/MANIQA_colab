@@ -133,8 +133,8 @@ if __name__ == '__main__':
     config = Config({
         # dataset path
         "db_name": "PIPAL",
-        "train_dis_path": "../NITRE2022/PIPAL_Training_Data/dist_images/",
-        "val_dis_path": "../NITRE2022/NTIRE2022_NR_Valid_Dis/",
+        "train_dis_path": "NITRE2022/PIPAL_Training_Data/dist_images/",
+        "val_dis_path": "NITRE2022/NTIRE2022_NR_Valid_Dis/",
         "train_txt_file_name": "./MANIQA/data/pipal21_train.txt",
         "val_txt_file_name": "./MANIQA/data/pipal21_val.txt",
 
